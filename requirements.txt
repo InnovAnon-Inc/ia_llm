@@ -1,0 +1,10 @@
+requests
+llama_cpp
+Cython
+setuptools
+faiss
+psutil
+PyInstaller
+pydantic
+huggingface_hub
+numpy

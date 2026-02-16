@@ -2193,15 +2193,15 @@ def get_llm_response_function_call_with_self_correction(
             tool_call            = result.tool_call
             if isinstance(result,FunctionCallUnknown):
                 assert not raise_on_error
-                logging.warning(f'function call unknown: {error}')
+                logging.warning(f'function call unknown: {result}')
                 message          = f"Error: The tool '{result.action}' does not exist. Please choose from the available tools."
             if isinstance(result,FunctionCallValidationError):
                 assert not raise_on_error
-                logging.warning(f'function call validation error: {error}')
+                logging.warning(f'function call validation error: {result}')
                 message          = f"The tool '{result.action}' failed with error: {result.error}. Fix your parameters?"
             if isinstance(result,FunctionCallError):
                 assert not raise_on_error
-                logging.warning(f'function call error: {error}')
+                logging.warning(f'function call error: {result}')
                 message          = f"The tool '{result.action}' failed with error: {result.error}. Fix your parameters?"
             _get_llm_response_function_call_with_self_correction_assertions(message, tool_call.thought, tool_call.action)
         except FunctionCallUnknownError as error:
