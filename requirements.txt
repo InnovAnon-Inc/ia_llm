@@ -1,10 +1,12 @@
-requests
-llama_cpp
-Cython
-setuptools
-faiss
-psutil
-PyInstaller
-pydantic
-huggingface_hub
-numpy
+numpy --no-binary :all:
+requests --no-binary :all:
+ia_package --no-binary :all:
+ia_cflags --no-binary :all:
+psutil --no-binary :all:
+Cython --no-binary :all:
+llama_cpp --no-binary :all:
+setuptools --no-binary :all:
+huggingface_hub --no-binary :all:
+PyInstaller --no-binary :all:
+faiss --no-binary :all:
+pydantic --no-binary :all:
