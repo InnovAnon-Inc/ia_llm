@@ -1,2 +1,2 @@
-from .ta import *
 from .solera import *
+from .ta import *
